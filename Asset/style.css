@@ -1,0 +1,33 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+nav{
+    background: black;
+    max-height: 56px;
+}
+nav *{
+    display: inline-block;
+}
+nav ul{
+    list-style: none;
+    width: 100%;
+    max-height: 56px;
+}
+.menu-tengah{
+    margin: 0 4%;
+}
+.menu-tengah a{
+    padding: 19px 20px;
+    text-decoration: none;
+    color: white;
+}
+.menu-tengah a:hover{
+    background: rgba(255, 255, 255,0.3) ;
+}
+.float-left{
+    float: left;
+}
+.float-right{
+    float: right;
+}
