@@ -1,6 +1,10 @@
 *{
     padding: 0;
     margin: 0;
+    font-family: 'roboto', sans-serif;
+}
+body{
+    overflow-x: hidden;
 }
 nav{
     background: black;
@@ -14,11 +18,15 @@ nav ul{
     width: 100%;
     max-height: 56px;
 }
+#greeting{
+    font-weight: bold;
+    font-size: 35px;
+}
 .menu-tengah{
     margin: 0 4%;
 }
 .menu-tengah a{
-    padding: 19px 20px;
+    padding: 19px 40px;
     text-decoration: none;
     color: white;
 }
@@ -30,4 +38,108 @@ nav ul{
 }
 .float-right{
     float: right;
+}
+#ref{
+    height: 440px;
+}
+#ref a{
+    text-decoration: none;
+    color: white;   
+}
+#ref h2{
+    text-align: center;
+    z-index: 12;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+#ref1{
+    display: inline-block;
+    /* background: url('./youtubePhone.jpg'); */
+    background-size: cover; 
+    position: relative;
+    float: left;
+    width: 50%;
+    /* left: 0px; */
+}
+#ref1Caption{
+    position: absolute;
+    z-index: 9;
+    left: 40%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    font-weight: bold;
+    font-size: 30px;
+    color: white;
+}
+#ref1 > div{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0,.8);
+    position: absolute;
+    z-index: 6;
+}
+.gambarPilihan{
+    width: 100%;
+    height: 100%;
+    transition: .5s ease;
+    /* filter: grayscale(100%); */
+}
+.gambarPilihan:hover{
+    filter: grayscale(0%);
+}
+#ref2{
+    display: inline-block;
+    /* background: url('./handWriting.jpg'); */
+    background-size: cover;
+    width: 50%;
+    position: relative;
+    /* right: 0px; */
+    float: right;
+}
+#ref2Caption {
+    position: absolute;
+    z-index: 9;
+    right: 30%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    font-weight: bold;
+    font-size: 30px;
+    color: white;
+}
+#ref2 >div {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .8);
+    position: absolute;
+    z-index: 6;
+}
+#pemisah{
+    position: absolute;
+    background: white;
+    width: 15%;
+    z-index: 11;
+    left: 50%;
+    transform: translateX(-50%) skew(20deg);
+}
+#pemisah h2{
+    font-size: 36px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+#pemisah,#ref1,#ref2{
+    height: 440px;
+}
+
+footer{
+    margin-top: 35px;
+    width: 100%;
+    height: 62px;
+    background: #ecf0f1;
+}
+footer > center{
+    width: 100%;
+    padding-top: 1.6%;
 }
