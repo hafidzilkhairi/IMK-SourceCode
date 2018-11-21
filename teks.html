@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="./Asset/jquery.3.3.1.js"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script src="./Asset/script.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="Asset/style.css">
+    <title>Normalize</title>
+</head>
+
+<body>
+    <center>
+        <nav>
+            <ul>
+                <li class="float-left menu-tengah"><a href="#">Beranda</a></li>
+                <li class="float-left menu-tengah"><a href="#">Materi</a></li>
+                <li><a href="#"><img src="Asset/LogoNormalize.png" alt="Logo"></a></li>
+                <li class="float-right menu-tengah"><a href="#">F.A.Q</a></li>
+                <li class="float-right menu-tengah"><a href="#">Soal</a></li>
+            </ul>
+        </nav>
+    </center>
+    <img id="headingImage" src="./Asset/book.jpg" alt="">
+    <h1 id="judul">Normalisasi 1NF</h1>
+    <div id="materi">
+        <div class="adaPaddingnya">
+            <div id="tombolDiskusi">
+                Diskusi
+            </div>
+            <p>Perhatikan tabel berikut :</p>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th scope="col">No. pelanggan</th>
+                        <th scope="col">Nama</th>
+                        <th scope="col">Nomor Property</th>
+                        <th scope="col">Alamat Property</th>
+                        <th scope="col">Tgl Peminjaman</th>
+                        <th scope="col">Tgl Selesai</th>
+                        <th scope="col">Biaya</th>
+                        <th scope="col">No Pemilik</th>
+                        <th scope="col">Nama Pemilik</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">CR 76</th>
+                        <td>Badi</td>
+                        <td>PG4</td>
+                        <td>Jl. Aai/07</td>
+                        <td>1-jul-93</td>
+                        <td>31-aug-95</td>
+                        <td>350</td>
+                        <td>CO40</td>
+                        <td>Ewin</td>
+                    </tr>
+                    <tr>
+                        <th scope="row"></th>
+                        <td></td>
+                        <td>PG16</td>
+                        <td>Jl. Huzai/12</td>
+                        <td>1-sep-95</td>
+                        <td>10-sep-96</td>
+                        <td>450</td>
+                        <td>CO93</td>
+                        <td>Duki</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">CR 76</th>
+                        <td>Nurdin</td>
+                        <td>PG4</td>
+                        <td>Jl. Aai/07</td>
+                        <td>1-sep-92</td>
+                        <td>10-jun-93</td>
+                        <td>350</td>
+                        <td>CO40</td>
+                        <td>Ewin</td>
+                    </tr>
+                    <tr>
+                        <th scope="row"></th>
+                        <td></td>
+                        <td>PG36</td>
+                        <td>Jl. Azhar/49</td>
+                        <td>10-oct-93</td>
+                        <td>1-dec-94</td>
+                        <td>375</td>
+                        <td>CO93</td>
+                        <td>Duki</td>
+                    </tr>
+                    <tr>
+                        <th scope="row"></th>
+                        <td></td>
+                        <td>PG16</td>
+                        <td>Jl. Huzai/12</td>
+                        <td>1-jan-95</td>
+                        <td>10-aug-95</td>
+                        <td>450</td>
+                        <td>CO93</td>
+                        <td>Duki</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="captionTable">Gambar 1.1</div>
+        </div>
+        <hr>
+        <div class="greenHighlight">
+            Gambar diatas belum memenuhi bentuk 1NF karena pada bentuk 1NF harus memenuhi syarat sebagai berikut :
+            <ol>
+                <li>Jika dan hanya jika semua kolomnya atomik (tidak ada kelompok berulang)</li>
+                <li>Setiap record harus unik</li>
+                <li>Tidak ada atribut bernilai ganda</li>
+            </ol>
+        </div>
+        <hr>
+        <div class="adaPaddingnya">
+            <p>Perhatikan gambar 1.1. Tabel belum berbentuk atomik karena attribut No_pelanggan dan Nama bernilai ganda. Oleh karena
+            itu, tabel dibuat seperti gambar 1.2 dibawah :</p>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th scope="col">No. pelanggan</th>
+                        <th scope="col">Nama</th>
+                        <th scope="col">Nomor Property</th>
+                        <th scope="col">Alamat Property</th>
+                        <th scope="col">Tgl Peminjaman</th>
+                        <th scope="col">Tgl Selesai</th>
+                        <th scope="col">Biaya</th>
+                        <th scope="col">No Pemilik</th>
+                        <th scope="col">Nama Pemilik</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">CR 76</th>
+                        <td>Badi</td>
+                        <td>PG4</td>
+                        <td>Jl. Aai/07</td>
+                        <td>1-jul-93</td>
+                        <td>31-aug-95</td>
+                        <td>350</td>
+                        <td>CO40</td>
+                        <td>Ewin</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">CR 76</th>
+                        <td>Badi</td>
+                        <td>PG16</td>
+                        <td>Jl. Huzai/12</td>
+                        <td>1-sep-95</td>
+                        <td>10-sep-96</td>
+                        <td>450</td>
+                        <td>CO93</td>
+                        <td>Duki</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">CR 76</th>
+                        <td>Nurdin</td>
+                        <td>PG4</td>
+                        <td>Jl. Aai/07</td>
+                        <td>1-sep-92</td>
+                        <td>10-jun-93</td>
+                        <td>350</td>
+                        <td>CO40</td>
+                        <td>Ewin</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">CR 76</th>
+                        <td>Nurdin</td>
+                        <td>PG36</td>
+                        <td>Jl. Azhar/49</td>
+                        <td>10-oct-93</td>
+                        <td>1-dec-94</td>
+                        <td>375</td>
+                        <td>CO93</td>
+                        <td>Duki</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">CR 76</th>
+                        <td>Nurdin</td>
+                        <td>PG16</td>
+                        <td>Jl. Huzai/12</td>
+                        <td>1-jan-95</td>
+                        <td>10-aug-95</td>
+                        <td>450</td>
+                        <td>CO93</td>
+                        <td>Duki</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="captionTable">Gambar 1.2</div>
+            <p>Pada gambar 1.2 dapat dilihat tabel sudah bersifat atomik dan tidak ada lagi atribut yang bernilai ganda, maka tabel
+            sudah memenuhi bentuk 1NF</p>
+        </div>
+    </div>
+    <center>
+        <div id="navigasiMateri">
+            <span class="sebelumMateri">Intro</span>
+            <a class="linkPrevMateri" href="#">
+                <div class="prevMateri">
+                    <div class="segitigaKiri"></div>
+                    <div class="balokKiri"></div>
+                </div>
+            </a>
+            <a class="linkNextMateri" href="#">
+                <div class="nextMateri">
+                    <div class="segitigaKanan"></div>
+                    <div class="balokKanan"></div>
+                </div>
+            </a>
+            <span class="setelahMateri">2NF</span>
+        </div>
+    </center>
+
+    <footer>
+        <center>
+            <span id="footer">
+                &copy;Copyright 2018 - Normalize!
+            </span>
+        </center>
+    </footer>
+</body>
+
+</html>
+    

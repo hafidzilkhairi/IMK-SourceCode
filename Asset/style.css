@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
 *{
     padding: 0;
     margin: 0;
@@ -142,4 +143,133 @@ footer{
 footer > center{
     width: 100%;
     padding-top: 1.6%;
+}
+footer span{
+    color:rgba(100, 100, 100, .8);
+}
+
+#headingImage{
+    width: 100%;
+    height: 238px;
+    object-fit: cover;
+    position: absolute;
+    z-index: -1;
+}
+
+#judul{
+    margin: 110px 50px 0px 50px;
+    color: white;
+    font-size: 60px;
+}
+
+#materi{
+    background: #ebebeb;
+    margin: 0 50px;
+    box-shadow: -20px 20px 20px rgba(80, 80, 80, 0.75);
+}
+.adaPaddingnya{
+    border: 20px solid rgba(0, 0, 0, 0);
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#tombolDiskusi{
+    width: 10%;
+    background: #c4c4c4;
+    padding: 10px;
+    box-sizing: border-box;
+    text-align: center;
+    margin-left: 90%;
+    margin-bottom: 25px;
+    border-radius: 20px;
+}
+
+#tombolDiskusi:hover{
+    cursor: pointer;
+}
+
+.captionTable{
+    margin: auto;
+    width: 10%;
+    text-align: center;
+    color: rgba(100, 100, 100,.8)
+}
+
+.greenHighlight{
+    width: 100%;
+    background: #7AB59B;
+    padding: 20px
+}
+.greenHighlight ol{
+    list-style-position: inside;
+    padding: 0;
+    margin: 0;
+}
+#navigasiMateri{
+    width: auto;
+    margin:40px 0 0 0;
+}
+#navigasiMateri a{
+    text-decoration: none;
+}
+.prevMateri{
+    width: 75px;
+    height: 75px;
+    border-radius: 100%;
+    background: #7AB59B;
+    display: inline-block;
+    margin: 0 10px;
+}
+.segitigaKiri{
+    width: 0;
+    height: 0;
+    border-left: 30px solid transparent;
+    border-right: 30px solid transparent;
+    border-bottom: 30px solid #c4c4c4;
+    transform: rotatez(-90deg);
+    position: relative;
+    top: 23px;
+    left: 3px;
+}
+.balokKiri{
+    height: 55px;
+    width: 10px;
+    background: #c4c4c4;
+    position: relative;
+    top: -20px;
+    left: -18px;
+}
+.nextMateri {
+    width: 75px;
+    height: 75px;
+    border-radius: 100%;
+    background: #7AB59B;
+    display: inline-block;
+    margin: 0 10px;
+}
+.segitigaKanan {
+    width: 0;
+    height: 0;
+    border-left: 30px solid transparent;
+    border-right: 30px solid transparent;
+    border-bottom: 30px solid #c4c4c4;
+    transform: rotatez(90deg);
+    position: relative;
+    top: 20px;
+    left: -2px;
+}
+
+.balokKanan {
+    height: 55px;
+    width: 10px;
+    background: #c4c4c4;
+    position: relative;
+    top: -20px;
+    left: 18px;
+}
+.sebelumMateri, .setelahMateri{
+    position: relative;
+    top: -28px;
+    font-size: 25px;
+    color: rgba(100, 100, 100,.8);
 }

@@ -17,4 +17,26 @@ $(()=>{
             'right': '0px'
         }, 'fast');
     })
+    $('.prevMateri').mouseenter(() => {
+        $('.sebelumMateri').css({
+            'color': 'black'
+        })
+        // console.log('saya');
+    })
+    $('.prevMateri').mouseleave(() => {
+        $('.sebelumMateri').css({
+            'color': 'rgba(100, 100, 100,.8)'
+        })
+    })
+    $('.nextMateri').mouseenter(() => {
+        $('.setelahMateri').css({
+            'color': 'black'
+        })
+        // console.log('saya');
+    })
+    $('.nextMateri').mouseleave(() => {
+        $('.setelahMateri').css({
+            'color': 'rgba(100, 100, 100,.8)'
+        })
+    })
 })
