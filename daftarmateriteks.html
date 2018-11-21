@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Materi</title>
+	<link rel="stylesheet" href="Asset/style.css">
+	<style>
+		.button {
+			margin-top: 26px;
+			border-radius: 9px;
+		    position: relative;
+		    background-color: #4CAF50;
+		    border: none;
+		    font-size: 28px;
+		    color: #FFFFFF;
+		    padding: 20px;
+		    width: 200px;
+		    text-align: center;
+		    -webkit-transition-duration: 0.4s; /* Safari */
+		    transition-duration: 0.4s;
+		    text-decoration: none;
+		    overflow: hidden;
+		    cursor: pointer;
+		    width: 90%;
+		}
+
+		.button:after {
+		    content: "";
+		    background: #90EE90;
+		    display: block;
+		    position: absolute;
+		    padding-top: 300%;
+		    padding-left: 350%;
+		    margin-left: -20px!important;
+		    margin-top: -120%;
+		    opacity: 0;
+		    transition: all 0.8s
+		}
+
+		.button:active:after {
+		    padding: 0;
+		    margin: 0;
+		    opacity: 1;
+		    transition: 0s		 
+		}
+
+		.button:hover {
+			box-shadow: 7px 9px #888888;
+		}
+		</style>
+</head>
+<body>
+	<center>
+        <nav>
+            <ul>
+                <li class="float-left menu-tengah"><a href="#">Beranda</a></li>
+                <li class="float-left menu-tengah"><a href="#">Materi</a></li>
+                <li><a href="#"><img src="Asset/LogoNormalize.png" alt="Logo"></a></li>
+                <li class="float-right menu-tengah"><a href="#">F.A.Q</a></li>
+                <li class="float-right menu-tengah"><a href="#">Soal</a></li>
+            </ul>
+        </nav>
+    </center>
+
+	<div style="background-image: url('Asset/wall.jpg'); height: 120px; width: 100%;">
+		<div><h1 style="color: white; padding-top: 60px; padding-left: 20px">Daftar Materi Teks</h1></div>
+	</div>
+	<center>
+		<button class="button">1. Intro</button>
+		<button class="button">2. 1NF</button>
+		<button class="button">3. 2NF</button>
+		<button class="button">4. 3NF</button>
+	</center>
+	<footer>
+        <center>
+            <span id="footer">
+                &copy;Copyright 2018 - Normalize!
+            </span>
+        </center>
+    </footer>
+</body>
+</html>

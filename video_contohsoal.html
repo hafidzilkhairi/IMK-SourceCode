@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Belajar menggunakan media video</title>	
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="Asset/style.css">
+
+	<style type="text/css">
+		/* Add a black background color to the top navigation */
+		.topnav {
+		    background-color: #333;
+		    overflow: hidden;
+		}
+
+		/* Style the links inside the navigation bar */
+		.topnav a {
+		    float: left;
+		    display: block;
+		    color: #f2f2f2;
+		    text-align: center;
+		    padding: 14px 16px;
+		    text-decoration: none;
+		    font-size: 17px;
+		}
+
+		/* Change the color of links on hover */
+		.topnav a:hover {
+		    background-color: #ddd;
+		    color: black;
+		}
+
+		/* Add an active class to highlight the current page */
+		.active {
+		    background-color: #4CAF50;
+		    color: white;
+		}
+
+		/* Hide the link that should open and close the topnav on small screens */
+		.topnav .icon {
+		    display: none;
+		}
+		/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+		@media screen and (max-width: 600px) {
+		  .topnav a:not(:first-child) {display: none;}
+		  .topnav a.icon {
+		    float: right;
+		    display: block;
+		  }
+		}
+
+		/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+		@media screen and (max-width: 600px) {
+		  .topnav.responsive {position: relative;}
+		  .topnav.responsive a.icon {
+		    position: absolute;
+		    right: 0;
+		    top: 0;
+		  }
+		  .topnav.responsive a {
+		    float: none;
+		    display: block;
+		    text-align: left;
+		  }		  
+		}
+		hr { margin: 15.5px;}	
+		.overlay {
+			position: relative;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			height: 100%;
+			width: 100%;
+			opacity: 0;
+			transition: .3s ease;			
+		}
+		.col-md-7:hover .overlay {
+			opacity: 0.8;
+		}
+		.icon {
+			
+		  color: #EEE;
+		  font-size: 50px;
+		  position: absolute;
+		  top: 50%;
+		  left: 50%;
+		  transform: translate(-50%, -50%);
+		  -ms-transform: translate(-50%, -50%);
+		  text-align: center;
+		}
+		.fa-user:hover {
+		  color: black;
+		}
+		.chat
+		{
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		}
+
+		.chat li
+		{
+		margin-bottom: 10px;
+		padding-bottom: 5px;
+		border-bottom: 1px dotted #B3A9A9;
+		}
+
+		.chat li.left .chat-body
+		{
+		margin-left: 60px;
+		}
+
+		.chat li.right .chat-body
+		{
+		margin-right: 60px;
+		}
+
+
+		.chat li .chat-body p
+		{
+		margin: 0;
+		color: #777777;
+		}
+
+		.panel .slidedown .glyphicon, .chat .glyphicon
+		{
+		margin-right: 5px;
+		}
+
+		.panel-body
+		{
+		overflow-y: scroll;
+		height: 250px;
+		}
+
+		::-webkit-scrollbar-track
+		{
+		-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+		background-color: #F5F5F5;
+		}
+
+		::-webkit-scrollbar
+		{
+		width: 12px;
+		background-color: #F5F5F5;
+		}
+
+		::-webkit-scrollbar-thumb
+		{
+		-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+		background-color: #555;
+		}
+
+	</style>
+</head>
+<body>
+	<center>
+        <nav>
+            <ul>
+                <li class="float-left menu-tengah"><a href="#">Beranda</a></li>
+                <li class="float-left menu-tengah"><a href="#">Materi</a></li>
+                <li><a href="#"><img src="Asset/LogoNormalize.png" alt="Logo"></a></li>
+                <li class="float-right menu-tengah"><a href="#">F.A.Q</a></li>
+                <li class="float-right menu-tengah"><a href="#">Soal</a></li>
+            </ul>
+        </nav>
+    </center>	
+
+	<div class="container-fluid" style="margin-top: 20px;">
+		<div class="row">
+			<div class="col-md-9">
+				<iframe id="ytplayer" type="text/html" width="100%" height="410"
+				  src="https://www.youtube.com/embed/Fbsfkr_TA8Y"
+				  frameborder="0"></iframe>
+			</div>
+			<div class="col-md-3">
+				<div class="row">
+					<div class="col-md-7"><a href="video_intro.html"><img src="Asset/intro.jpg" style="width: 100%; height: 100%;"></a>
+					<a href="video_intro.html" class="icon"><div class="overlay">					    
+					      <i class="fa fa-play"></i> 					    
+					  </div></a></div>					
+					<div class="col-md-5"><a href="video_intro.html"><h4>Normalisasi : Intro</h4></a></div>
+				</div></a> <hr>			
+				<div class="row">
+					<div class="col-md-7"><a href="video_1nf.html"><img src="Asset/1nf.jpg" style="width: 100%; height: 100%;"></a>
+					<a href="video_1nf.html" class="icon"><div class="overlay">					    
+					      <i class="fa fa-play"></i> 					    
+					  </div></a></div>	
+					<div class="col-md-5"><a href="video_1nf.html"><h4>Normalisasi : 1NF</h4></a></div>
+				</div><hr>
+				<div class="row">
+					<div class="col-md-7"><a href="video_2nf.html"><img src="Asset/2nf.jpg" style="width: 100%; height: 100%;"></a>
+					<a href="video_2nf.html" class="icon"><div class="overlay">					    
+					      <i class="fa fa-play"></i> 					    
+					  </div></a></div>	
+					<div class="col-md-5"><a href="video_2nf.html"><h4>Normalisasi : 2NF</h4></a></div>
+				</div><hr>
+				<div class="row">
+					<div class="col-md-7"><a href="video_3nf.html"><img src="Asset/3nf.jpg" style="width: 100%; height: 100%;"></a>
+					<a href="video_3nf.html" class="icon"><div class="overlay">					    
+					      <i class="fa fa-play"></i> 					    
+					  </div></a></div>	
+					<div class="col-md-5"><a href="video_3nf.html"><h4>Normalisasi : 3NF</h4></a></div>
+				</div>
+			</div>
+		</div>		
+	</div>
+
+	<div class="container-fluid" style="margin-top: 10px;">
+	    <div class="row">
+	        <div class="col-md-12">
+	            <div class="panel panel-primary">
+	                <div class="panel-heading" id="accordion" style="background-color: #4CAF50;">
+	                    <span class="glyphicon glyphicon-comment"></span> diskusi	                    
+	                </div>
+	            <div id="collapseOne">
+	                <div class="panel-body">
+	                    <ul class="chat">
+	                        <li class="left clearfix">
+	                            <div class="chat-body clearfix">
+	                                <div class="header">
+	                                    <strong class="primary-font">Jack Sparrow</strong> <small class="pull-right text-muted">
+	                                        <span class="glyphicon glyphicon-time"></span>12 mins ago</small>
+	                                </div>
+	                                <p>
+	                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare
+	                                    dolor, quis ullamcorper ligula sodales.
+	                                </p>
+	                            </div>
+	                        </li>
+	                        <li class="right clearfix">
+	                            <div class="chat-body clearfix">
+	                                <div class="header">
+	                                    <small class=" text-muted"><span class="glyphicon glyphicon-time"></span>13 mins ago</small>
+	                                    <strong class="pull-right primary-font">Bhaumik Patel</strong>
+	                                </div>
+	                                <p style="text-align: right;">
+	                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare
+	                                    dolor, quis ullamcorper ligula sodales.
+	                                </p>
+	                            </div>
+	                        </li>
+	                        <li class="left clearfix">
+	                            <div class="chat-body clearfix">
+	                                <div class="header">
+	                                    <strong class="primary-font">Jack Sparrow</strong> <small class="pull-right text-muted">
+	                                        <span class="glyphicon glyphicon-time"></span>14 mins ago</small>
+	                                </div>
+	                                <p>
+	                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare
+	                                    dolor, quis ullamcorper ligula sodales.
+	                                </p>
+	                            </div>
+	                        </li>
+	                        <li class="right clearfix">
+	                            <div class="chat-body clearfix">
+	                                <div class="header">
+	                                    <small class=" text-muted"><span class="glyphicon glyphicon-time"></span>15 mins ago</small>
+	                                    <strong class="pull-right primary-font">Bhaumik Patel</strong>
+	                                </div>
+	                                <p style="text-align: right;">
+	                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare
+	                                    dolor, quis ullamcorper ligula sodales.
+	                                </p>
+	                            </div>
+	                        </li>
+	                    </ul>
+	                </div>
+	                <div class="panel-footer">
+	                    <div class="comtainer-fluid">
+	                    	<div class="row">
+	                    		<form>
+	                    		<div class="col-md-3">
+	                    			<input type="btn-input" type="text" class="form-control input-sm" placeholder=" Name"  name="" required="">
+	                    		</div>
+	                    		<div class="col-md-8">
+	                    			<input id="btn-input" type="text" class="form-control input-sm" placeholder="Type your message here..." / name="" required="">		
+	                    		</div>
+	                    		<div class="col-md-1">
+	                    			<span class="input-group-btn">
+	                            <button class="btn btn-success btn-sm" id="btn-chat">
+	                                Send</button>
+	                        </span>
+	                    		</div>
+	                    		</form>
+	                    	</div>
+	                    	
+	                        
+	                        
+	                    </div>
+	                </div>
+	            </div>
+	            </div>
+	        </div>
+	    </div>
+	</div>
+	<footer>
+        <center>
+            <span id="footer">
+                &copy;Copyright 2018 - Normalize!
+            </span>
+        </center>
+    </footer>
+
+</body>
+<script type="text/javascript">
+	/* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
+	function myFunction() {
+	    var x = document.getElementById("myTopnav");
+	    if (x.className === "topnav") {
+	        x.className += " responsive";
+	    } else {
+	        x.className = "topnav";
+	    }
+	}
+</script>
+</html>
