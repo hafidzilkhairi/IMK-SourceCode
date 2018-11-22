@@ -97,7 +97,13 @@
 		-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
 		background-color: #555;
 		}
-
+		#lil {
+			margin-top: 25px; margin-left: 30px;
+		}
+		a { color: black; }
+		.active {
+			font-weight: 900;
+		}
 	</style>
 </head>
 <body>
@@ -121,33 +127,15 @@
 				  frameborder="0"></iframe>
 			</div>
 			<div class="col-md-3">
-				<div class="row">
-					<div class="col-md-7"><a href="video_intro.html"><img src="Asset/intro.jpg" style="width: 100%; height: 100%;"></a>
-					<a href="video_intro.html" class="icon"><div class="overlay">					    
-					      <i class="fa fa-play"></i> 					    
-					  </div></a></div>					
-					<div class="col-md-5"><a href="video_intro.html"><h4>Normalisasi : Intro</h4></a></div>
-				</div></a> <hr>			
-				<div class="row">
-					<div class="col-md-7"><a href="video_2nf.html"><img src="Asset/2nf.jpg" style="width: 100%; height: 100%;"></a>
-					<a href="video_2nf.html" class="icon"><div class="overlay">					    
-					      <i class="fa fa-play"></i> 					    
-					  </div></a></div>	
-					<div class="col-md-5"><a href="video_2nf.html"><h4>Normalisasi : 2NF</h4></a></div>
-				</div><hr>
-				<div class="row">
-					<div class="col-md-7"><a href="video_3nf.html"><img src="Asset/3nf.jpg" style="width: 100%; height: 100%;"></a>
-					<a href="video_3nf.html" class="icon"><div class="overlay">					    
-					      <i class="fa fa-play"></i> 					    
-					  </div></a></div>	
-					<div class="col-md-5"><a href="video_3nf.html"><h4>Normalisasi : 3NF</h4></a></div>
-				</div><hr>
-				<div class="row">
-					<div class="col-md-7"><a href="video_contohsoal.html"><img src="Asset/contohsoal.jpg" style="width: 100%; height: 100%;"></a>
-					<a href="video_contohsoal.html" class="icon"><div class="overlay">					    
-					      <i class="fa fa-play"></i> 					    
-					  </div></a></div>	
-					<div class="col-md-5"><a href="video_contohsoal.html"><h4>Normalisasi : contoh soal</h4></a></div>
+				<div class="container" style="border-radius: 9px; border: 1px solid black; background-color: #c4c4c4; height: 100%; width: 100%">
+					<center><h2 style="margin-top: 50px; margin-bottom: 40px;">Normalisasi</h2></center>
+					<ul>
+						<a href="video_intro.html"><li id="lil">Intro</li></a>
+						<a href="video_1nf.html"><li id="lil" class="active">1NF</li></a>
+						<a href="video_2nf.html"><li id="lil">2NF</li></a>
+						<a href="video_3nf.html"><li id="lil">3NF</li></a>
+						<a href="video_contohsoal.html"><li style="padding-bottom: 73px;" id="lil">Contoh Soal</li></a>
+					</ul>
 				</div>
 			</div>
 		</div>		
