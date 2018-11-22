@@ -33,6 +33,14 @@
    		</div>
    		<div id="Btn" class="btnSubmit ">Submit</div>
    		<div id="Btnnext" class="btnNext ">Next</div>
+        <div class="container" >
+            <div class="solusi" style="padding: 20px;">
+                Syarat 1NF adalah : <br>
+                1.  Jika dan hanya jika semua kolomnya atomik (tidak ada kelompok berulang) <br>
+                2.  Setiap record harus unik <br>
+                3.  Tidak ada atribut bernilai ganda <br>
+            </div>
+        </div>
    	</div>
 
 	<footer>
@@ -47,7 +55,7 @@
 <script type="text/javascript">
 	
 $(document).ready(function(){
-	
+	$(".solusi").hide();
 	$("#Btnnext").hide();
     $("#a").click(function(){
         $("#a").addClass("selected");
@@ -78,6 +86,7 @@ $(document).ready(function(){
 	        $("#c").removeClass("selected");
 	        $("#Btn").hide();
 	        $("#Btnnext").show();
+            $(".solusi").show();
 		}
     });
     $("#Btnnext").click(function(){
