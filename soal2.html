@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="./Asset/jquery.3.3.1.js"></script>
+    <script src="./Asset/script.js"></script>
+    <link rel="stylesheet" href="Asset/style.css">
+    <title>Normalize</title>
+</head>
+<body>
+    <center>
+        <nav>
+            <ul>
+                <li class="float-left menu-tengah"><a href="#">Beranda</a></li>
+                <li class="float-left menu-tengah"><a href="#">Materi</a></li>
+                <li><a href="#"><img src="Asset/LogoNormalize.png" alt="Logo"></a></li>
+                <li class="float-right menu-tengah"><a href="#">F.A.Q</a></li>
+                <li class="float-right menu-tengah"><a href="#">Soal</a></li>
+            </ul>
+        </nav>
+    </center>
+
+    <div>
+   		<div class="latSoal" >Latihan Soal</div>
+   		<div class="gruppil">
+   			<div class="pertanyaan">Berikut ini adalah tujuan dari normalisasi (Kecuali)</div>
+   			<div id="a" class="pilihan"><span class="txtpil">A. Menghindari coding tidak perlu</span></div>
+   			<div id="b" class="pilihan"><span class="txtpil">B. Menghindari redundansi pada database</span></div>
+   			<div id="c" class="pilihan"><span class="txtpil">C. Untuk membuat model suatu database dengan diagram</span></div>
+   		</div>
+   		<div id="Btn" class="btnSubmit ">Submit</div>
+   		<div id="Btnnext" class="btnSubmit ">Next</div>
+   	</div>
+
+	<footer>
+        <center>
+            <span id="footer">
+                &copy;Copyright 2018 - Normalize!
+            </span>
+        </center>
+	</footer>
+</body>
+
+<script type="text/javascript">
+	
+$(document).ready(function(){
+    
+    $("#Btnnext").hide();
+    $("#a").click(function(){
+        $("#a").addClass("selected");
+        $("#b").removeClass("selected");
+        $("#c").removeClass("selected");
+        $("#Btn").addClass("enabled");
+    });
+    $("#b").click(function(){
+        $("#a").removeClass("selected");
+        $("#b").addClass("selected");
+        $("#c").removeClass("selected");
+        $("#Btn").addClass("enabled");
+    });
+    $("#c").click(function(){
+        $("#a").removeClass("selected");
+        $("#b").removeClass("selected");
+        $("#c").addClass("selected");
+        $("#Btn").addClass("enabled");
+    });
+
+    $("#Btn").click(function(){
+        if($("#Btn").hasClass("enabled")){
+            $("#a").addClass("wrong");
+            $("#b").addClass("wrong");
+            $("#c").addClass("right");
+            $("#a").removeClass("selected");
+            $("#b").removeClass("selected");
+            $("#c").removeClass("selected");
+            $("#Btn").hide();
+        }
+    });
+    $("#Btnnext").click(function(){
+        url = "http://localhost/imk/soal2.html";
+        window.location = url
+    });
+
+    $(window).bind('beforeunload', function(){
+        if($("#a").hasClass("selected")||$("#b").hasClass("selected")||$("#c").hasClass("selected"))
+        return 'Are you sure you want to leave?';
+    });
+
+    $(document).mouseup(function(e) {
+        var container1 = $("#a");
+        var container2 = $("#b");
+        var container3 = $("#c");
+        var container4 = $("#Btn");
+
+        // if the target of the click isn't the container nor a descendant of the container
+        if ((!container1.is(e.target) && container1.has(e.target).length === 0) && (!container2.is(e.target) && container2.has(e.target).length === 0) && (!container3.is(e.target) && container3.has(e.target).length === 0) && (!container4.is(e.target) && container4.has(e.target).length === 0))
+        {
+            if(container1.hasClass("selected")||container2.hasClass("selected")||container3.hasClass("selected")){
+                $("#a").removeClass("selected");
+                $("#b").removeClass("selected");
+                $("#c").removeClass("selected");
+                $("#Btn").removeClass("enabled")
+            }
+        }
+    });
+
+});
+</script>
