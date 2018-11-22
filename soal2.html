@@ -32,6 +32,18 @@
    		</div>
    		<div id="Btn" class="btnSubmit ">Submit</div>
    		<div id="Btnnext" class="btnSubmit ">Next</div>
+        <div class="solusi">
+            <h4 style="margin: 5px;">solusi</h4>
+            <div  style="padding: 20px;">
+            Tujuan Normalisasi : <br>
+            1.  Menghindari redundansi data <br>
+            2.  Membentuk database yang mampu mengakomodasi perubahan secara akurat <br>
+            3.  Menghindari perbaharuan data yang menyebabkan anomali <br>
+            4.  Memfasilitasi penegakkan batasan-batasan (constraint) data<br>
+            5.  Menghindari coding yang tidak perlu<br>
+
+            </div>
+        </div>
    	</div>
 
 	<footer>
@@ -46,7 +58,7 @@
 <script type="text/javascript">
 	
 $(document).ready(function(){
-    
+    $(".solusi").hide();
     $("#Btnnext").hide();
     $("#a").click(function(){
         $("#a").addClass("selected");
@@ -76,6 +88,8 @@ $(document).ready(function(){
             $("#b").removeClass("selected");
             $("#c").removeClass("selected");
             $("#Btn").hide();
+            $("#Btnnext").show();
+            $(".solusi").show();
         }
     });
     $("#Btnnext").click(function(){

@@ -26,13 +26,19 @@
    		<div class="latSoal" >Latihan Soal</div>
    		<img class="soal1" src="Asset/gambarsoal2nf.png"/>
    		<div class="gruppil">
-   			<div class="pertanyaan">Tabel di atas belum memenuhi 2NF karena atribut bukan kunci harus bergantung penuh secara fungsional pada candidate key, diantara relasi berikut yang bukan pemecahan tabel untuk memenuhi 2NF adalah :</div>
+   			<div class="pertanyaan">Diantara relasi berikut yang dapat dilakukan pemecahan untuk memenuhi 2NF adalah :</div>
    			<div id="a" class="pilihan"><span class="txtpil">A. No_Pelanggan -> Nama</span></div>
    			<div id="b" class="pilihan"><span class="txtpil">B. No_Pelanggan,No_property->Tgl_pinjam,Tgl_selesai</span></div>
    			<div id="c" class="pilihan"><span class="txtpil">C. Tgl_pinjam -> Biaya</span></div>
    		</div>
    		<div id="Btn" class="btnSubmit ">Submit</div>
    		<div id="Btnnext" class="btnNext ">Next</div>
+        <div class="solusi">
+            <h4 style="margin: 5px;">solusi</h4>
+            <div  style="padding: 20px;">
+                Tgl_pinjam -> Biaya tidak dijadikan tabel relasi karena Tgl_pinjam tidak bisa menjadi primary key dan tidak pula menentukan Biaya
+            </div>
+        </div>
    	</div>
 
 	<footer>
@@ -47,7 +53,7 @@
 <script type="text/javascript">
 	
 $(document).ready(function(){
-	
+    $(".solusi").hide();
 	$("#Btnnext").hide();
     $("#a").click(function(){
         $("#a").addClass("selected");
@@ -78,6 +84,7 @@ $(document).ready(function(){
 	        $("#c").removeClass("selected");
 	        $("#Btn").hide();
 	        $("#Btnnext").show();
+            $(".solusi").show();
 		}
     });
     $("#Btnnext").click(function(){

@@ -33,6 +33,12 @@
    		</div>
    		<div id="Btn" class="btnSubmit ">Submit</div>
    		<div id="Btnnext" class="btnNext ">Next</div>
+        <div class="solusi">
+            <h4 style="margin: 5px;">solusi</h4>
+            <div  style="padding: 20px;">
+                Ketergantungan transitif adalah ketika attribut non key bergantung dengan attribut lain yang bukan primary key, dari soal di atas No_Pemilik bukan primary key namun bisa menentukan attribut non key yaitu Nama Pemilik
+            </div>
+        </div>
    	</div>
 
 	<footer>
@@ -47,7 +53,7 @@
 <script type="text/javascript">
 	
 $(document).ready(function(){
-	
+	$(".solusi").hide();
 	$("#Btnnext").hide();
     $("#a").click(function(){
         $("#a").addClass("selected");
@@ -78,6 +84,7 @@ $(document).ready(function(){
 	        $("#c").removeClass("selected");
 	        $("#Btn").hide();
 	        $("#Btnnext").show();
+            $(".solusi").show();
 		}
     });
     $("#Btnnext").click(function(){
