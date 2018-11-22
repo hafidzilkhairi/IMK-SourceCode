@@ -7,6 +7,20 @@
 body{
     overflow-x: hidden;
 }
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+    background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar-thumb {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+    background-color: #555;
+}
 nav{
     background: black;
     max-height: 56px;
@@ -27,7 +41,7 @@ nav ul{
     margin: 0 4%;
 }
 .menu-tengah a{
-    padding: 19px 40px;
+    padding: 16px 40px;
     text-decoration: none;
     color: white;
 }
@@ -51,7 +65,7 @@ nav ul{
     text-align: center;
     z-index: 12;
     position: absolute;
-    top: 50%;
+    top: 45%;
     left: 50%;
     transform: translateX(-50%);
 }
@@ -157,7 +171,7 @@ footer span{
 }
 
 #judul{
-    margin: 110px 50px 0px 50px;
+    margin: 80px 50px 0px 50px;
     color: white;
     font-size: 60px;
 }
@@ -272,4 +286,108 @@ footer span{
     top: -28px;
     font-size: 25px;
     color: rgba(100, 100, 100,.8);
+}
+
+.layarGelapDiskusi, .jendelaDiskusi{
+    position: fixed;
+}
+.layarGelapDiskusi{
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .8);
+    z-index: 150;
+    top: 0px;
+}
+.jendelaDiskusi{
+    margin: 5%;
+    width: 90%;
+    height: 80%;
+    background: #ebebeb;
+    z-index: 151;
+    top: 0px;
+}
+.tombolClose{
+    width: 30px;
+    height: 30px;
+    background: red;
+    border-radius: 100%;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    transform: translateX(50%) translateY(-50%);
+    cursor: pointer;
+}
+.balokSilangKiri, .balokSilangKanan{
+    height: 28px;
+    width: 8px;
+    background: black;
+    transform: rotateZ(45deg);
+    position: absolute;
+    left: 10.5px;
+    top:.5px;
+}
+.balokSilangKanan{
+    transform: rotateZ(-45deg);
+}
+.layarChat{
+    box-sizing: border-box;
+    border: 15px solid #ebebeb;
+    width: 100%;
+    background: white;
+    height: 80%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+.namaUser, .isiPesanUser{
+    /* border: 15px solid #ebebeb; */
+    margin: 15px;
+    border-radius: 10px;
+}
+.namaUser{
+    width: 15%;
+    border-color: red;
+}
+.isiPesanUser{
+    width: 79.7%;
+    border-color: red;
+}
+.buttonPesanUser{
+    border-right: 15px solid #ebebeb;
+    float: right;
+}
+.buttonPesanUser button{
+    border:none;
+    background: #37EC54;
+    padding: 5px;
+    cursor: pointer;
+}
+.lawanBicara {
+    padding: 20px;
+}
+
+.kotakChatLawanBicara {
+    width: 60%;
+    height: auto;
+    background: #DFDEDE;
+}
+.diriSendiri {
+    padding: 20px;
+    position: relative;
+    right: 0px;
+}
+
+.diriSendiri > div{
+    width: 60%;
+    position: relative;
+    margin-left: 40%;
+}
+
+.namaDiriSendiri{
+    width: 100%;
+    text-align: right;
+}
+
+.kotakChatDiriSendiri {
+    height: auto;
+    background: #DFDEDE;
 }
